@@ -2,6 +2,9 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: 'EB Garamond';
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 header{
     width:100%;
@@ -25,4 +28,13 @@ hr{
     border-bottom: 1px solid #ccc;
     width:80%;
     margin: 0 auto;
+}
+table{
+    margin: 0 auto;
+}
+div {
+    width: 100%;
+    margin-bottom: 2%;
+    background: gold;
+    aspect-ratio: 1/1;
 }
