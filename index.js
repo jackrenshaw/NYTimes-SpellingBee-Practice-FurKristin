@@ -123,3 +123,32 @@ function ProvideMetrics(ReducedWordList){
         "words":ppw.length
     }
 }
+
+const candidate = document.getElementById("word");
+const deleteButton = document.getElementById("delete");
+const enterButton = document.getElementById("enter");
+const shuffleButton = document.getElementById("shuffle");
+
+enterButton.onclick = function(){
+    console.log("The Enter Button has been clicked")
+}
+
+deleteButton.onclick = function(){
+    console.log("The Delete Button has been clicked")
+}
+
+shuffleButton.onclick = function(){
+    console.log("The Shuffle Button has been clicked")
+}
+
+document.addEventListener('click', function(event) {
+    if (event.target.matches('div')) {
+      // Code to execute if any div is clicked
+      console.log("A div was clicked!");
+      // You can access the clicked div using event.target
+      console.log("Clicked div:", event.target.innerText);
+      candidate.innerText = candidate.innerText + event.target.innerText 
+
+    }
+  });
+  
