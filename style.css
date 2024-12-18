@@ -14,6 +14,9 @@ header{
     color:#000;
     text-align:right;
 }
+main{
+    width: 80%;
+}
 header span{
     padding: 10px;
     cursor:pointer
@@ -26,15 +29,37 @@ main h1{
 }
 hr{
     border-bottom: 1px solid #ccc;
-    width:80%;
     margin: 0 auto;
 }
 table{
+    margin: 0 auto;
+    width: 50%;
+}
+td{
+    width: 33%;
+    text-align: center;
     margin: 0 auto;
 }
 div {
     width: 100%;
     margin-bottom: 2%;
-    background: gold;
+    background: #eee;
     aspect-ratio: 1/1;
+    display: grid;
+    align-items: center;
+}
+div.middle {
+    background: gold;
+}
+div:active {
+    transform: scale(0.7);
+}
+div h1{
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5rem;
+}
+#delete,#shuffle,#enter{
+    cursor: pointer;
 }
