@@ -4,34 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
+    <title>Practice Spelling Bee</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=cached" />
   </head>
   <body>
     <header>
-        <span id="hints">Hints</span>
-        <span id="difficulty">Difficulty</span>
-        <span id="newgame">New Game</span>
+        <span id="button_hints">Hints</span>
+        <span id="button_difficulty">Difficulty</span>
+        <span id="button_newgame">New Game</span>
     </header>
     <main>
-        <h1>Points <span id="points" class="magic">0</span> of <span id="possiblepoints">263</span></h1>
-        <div id="foundwords">Hello World Testing Testing Testing Testing</div>
+        <h1>Points <span id="field_points" class="magic">0</span> of <span id="field_possiblepoints">263</span></h1>
+        <div id="field_foundwords"></div>
         <hr>
-        <h1 id="candidate"> &nbsp;</h1>
+        <h1 id="field_candidate"> &nbsp;</h1>
         <table>
             <tr>
-                <td><div id="1" class="outer"><h1>A</h1></div><div id="2" class="outer"><h1>B</h1></div></td>
-                <td><div id="3" class="outer"><h1>C</h1></div><div id="0" class="middle"><h1>D</h1></div><div id="4" class="outer"><h1>E</h1></div></td>
-                <td><div id="5" class="outer"><h1>F</h1></div><div id="6" class="outer"><h1>G</h1></div></td>
+                <td><div id="1" class="button_outerletter"><h1>A</h1></div><div id="2" class="button_outerletter"><h1>B</h1></div></td>
+                <td><div id="3" class="button_outerletter"><h1>C</h1></div><div id="0" class="button_innerletter"><h1>D</h1></div><div id="4" class="button_outerletter"><h1>E</h1></div></td>
+                <td><div id="5" class="button_outerletter"><h1>F</h1></div><div id="6" class="button_outerletter"><h1>G</h1></div></td>
             </tr>
-            <tr><td id="delete">Delete</td><td id="shuffle"><span class="material-symbols-outlined">cached</span></td><td id="enter">Enter</td></tr>
+            <tr><td id="button_delete">Delete</td><td id="button_shuffle"><span class="material-symbols-outlined">cached</span></td><td id="button_enter">Enter</td></tr>
         </table>
-        <div id="hints">
-          <b>Words: </b><span id="hint_words"></span><br>
-          <b>Lengths: </b><span id="hint_lengths"></span><br>
-          <b>Panagrams: </b><span id="hint_panagrams"></span>
+        <div id="area_hints">
+          <b>Words: </b><span id="field_hints_words"></span><br>
+          <b>Panagrams: </b><span id="field_hints_panagrams"></span>
         </div>
     </main>
     <script src="index.js"></script>

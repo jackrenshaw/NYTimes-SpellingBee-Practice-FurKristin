@@ -24,6 +24,9 @@ header span{
 header span:active{
     background:gold;
 }
+header span.active{
+    background:gold;
+}
 main h1{
     text-align: center;
 }
@@ -32,7 +35,7 @@ hr{
 }
 table{
     margin: 0 auto;
-    width: 50%;
+    width: 70%;
 }
 td{
     width: 33%;
@@ -47,7 +50,7 @@ table div {
     display: grid;
     align-items: center;
 }
-table div.middle {
+table div.button_innerletter {
     background: gold;
 }
 #candidate span{
@@ -63,24 +66,38 @@ table div h1{
     margin: 0 auto;
     text-align: center;
     vertical-align: middle;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-transform: uppercase;
 }
 #delete,#shuffle,#enter{
     cursor: pointer;
 }
-#foundwords{
-    padding:4px;
-    border:1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
+#field_foundwords{
     margin: 0 auto;
     text-align: center;
     overflow: hidden;
-    font-size: 1em;
-    height: 1.2em;
+    font-size: 1.3em;
+    height: 1.5em;
 }
 
-#foundwords.expanded{
-    height:12rem;
+#field_foundwords.expanded{
+    height:auto;
 }
+.popup{
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    opacity: 1; /* Initial opacity */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade-in/out */
+  }
+  #area_hints{
+    display: none;
+  }
+  #area_hints.active{
+    display: block;
+  }
