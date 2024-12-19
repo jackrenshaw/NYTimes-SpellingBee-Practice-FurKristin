@@ -28,8 +28,7 @@ main h1{
     text-align: center;
 }
 hr{
-    border-bottom: 1px solid #ccc;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 table{
     margin: 0 auto;
@@ -40,7 +39,7 @@ td{
     text-align: center;
     margin: 0 auto;
 }
-div {
+table div {
     width: 100%;
     margin-bottom: 2%;
     background: #eee;
@@ -48,18 +47,37 @@ div {
     display: grid;
     align-items: center;
 }
-div.middle {
+table div.middle {
     background: gold;
 }
-div:active {
+#candidate span.magic{
+    color: gold;
+}
+table div:active {
     transform: scale(0.7);
 }
-div h1{
+table div h1{
     margin: 0 auto;
     text-align: center;
     vertical-align: middle;
     font-size: 1.5rem;
+    text-transform: uppercase;
 }
 #delete,#shuffle,#enter{
     cursor: pointer;
+}
+#foundwords{
+    padding:4px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    font-size: 1em;
+    height: 1.2em;
+}
+
+#foundwords.expanded{
+    height:12rem;
 }
