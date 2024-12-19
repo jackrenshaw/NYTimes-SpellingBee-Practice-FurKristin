@@ -15,14 +15,14 @@ header{
     text-align:right;
 }
 main{
-    width: 80%;
+    width: 95%;
 }
 header span{
     padding: 10px;
     cursor:pointer
 }
-header span:hover{
-    background:yellow;
+header span:active{
+    background:gold;
 }
 main h1{
     text-align: center;
@@ -50,7 +50,10 @@ table div {
 table div.middle {
     background: gold;
 }
-#candidate span.magic{
+#candidate span{
+    display: inline-block;
+}
+span.magic{
     color: gold;
 }
 table div:active {

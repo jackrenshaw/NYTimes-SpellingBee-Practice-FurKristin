@@ -107,6 +107,10 @@ function ScoreWord(word,centerletter,outerletters){
     return points
 }
 
+function ProvideHints(){
+    candid
+}
+
 function GenerateReducedWordlist(wl,seed){
     var rwl = {}
     centerletter = seed[0]

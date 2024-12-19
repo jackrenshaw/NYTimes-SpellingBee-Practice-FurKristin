@@ -16,7 +16,7 @@
         <span id="newgame">New Game</span>
     </header>
     <main>
-        <h1>Points <span id="points">0</span> of <span id="possiblepoints">263</span></h1>
+        <h1>Points <span id="points" class="magic">0</span> of <span id="possiblepoints">263</span></h1>
         <div id="foundwords">Hello World Testing Testing Testing Testing</div>
         <hr>
         <h1 id="candidate"> &nbsp;</h1>
@@ -28,6 +28,11 @@
             </tr>
             <tr><td id="delete">Delete</td><td id="shuffle"><span class="material-symbols-outlined">cached</span></td><td id="enter">Enter</td></tr>
         </table>
+        <div id="hints">
+          <b>Words: </b><span id="hint_words"></span><br>
+          <b>Lengths: </b><span id="hint_lengths"></span><br>
+          <b>Panagrams: </b><span id="hint_panagrams"></span>
+        </div>
     </main>
     <script src="index.js"></script>
   </body>
