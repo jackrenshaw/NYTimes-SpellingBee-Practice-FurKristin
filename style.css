@@ -50,7 +50,7 @@ table div {
     display: grid;
     align-items: center;
 }
-table div.button_innerletter {
+table div.button_centerletter {
     background: gold;
 }
 #candidate span{
