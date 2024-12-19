@@ -196,7 +196,7 @@ function PopulateGUI(){
 // Function loads the game when the page loads, either based on existing game (if one exists) or creates a new game by default
 function Main(){
     if(!localStorage.getItem("Seed") || !localStorage.getItem("ReducedWordList"))
-        NewGame()
+        NewGamePanagram()
     if(!localStorage.getItem("Dictionary"))
         localStorage.setItem("Dictionary",JSON.stringify(words.filter(word => word.length >= 4))); // Filters wordlist 
     PopulateGUI()
