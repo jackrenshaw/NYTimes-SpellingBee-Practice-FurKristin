@@ -20,9 +20,12 @@ const button_enter = document.getElementById("button_enter");
 const button_shuffle = document.getElementById("button_shuffle");
 const button_newgame = document.getElementById("button_newgame")
 const button_hints = document.getElementById("button_hints")
+const button_showsolutions = document.getElementById("button_showsolutions")
+
 const button_difficultly = document.getElementById("button_difficulty") // Not yet used
 const button_outerletters = document.getElementsByClassName("button_outerletter")
 const button_centerletter = document.getElementsByClassName("button_centerletter")[0]
+
 const field_candidate = document.getElementById("field_candidate");
 const field_points = document.getElementById("field_points")
 const field_possiblepoints = document.getElementById("field_possiblepoints")
@@ -30,6 +33,7 @@ const field_foundwords = document.getElementById("field_foundwords")
 const field_hints_words = document.getElementById("field_hints_words")
 const field_hints_lengths = document.getElementById("field_hints_lengths")
 const field_hints_panagrams = document.getElementById("field_hints_panagrams")
+const field_solutions = document.getElementById("field_solutions")
 
 
 // Function takes in an array and returns k random elements from the array
@@ -184,6 +188,7 @@ function PopulateGUI(){
     Targets = ProvideMetrics(RWL)
     console.log(Targets)
     field_possiblepoints.innerText = Targets["points"]
+    field_solutions.innerHTML = Object.keys(RWL).join(" ")
     UpdatePoints()
     FurnishHints()
 }
@@ -292,6 +297,14 @@ button_hints.onclick = function(){
         button_hints.classList.add("active")
         area_hints.classList.add("active")
     }
+}
+
+// When the hints button is clicked, it becomes active and so does the hints area
+button_showsolutions.onclick = function(){
+    if(field_solutions.classList.contains("active"))
+        field_solutions.classList.remove("active")
+    else
+        field_solutions.classList.add("active")
 }
 
 Main() // Call the main routine

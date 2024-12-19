@@ -101,3 +101,14 @@ table div h1{
   #area_hints.active{
     display: block;
   }
+  #button_showsolutions{
+    background-color: gold;
+    padding: 5px;
+    cursor: pointer;
+  }
+  #field_solutions{
+    display: none;
+  }
+  #field_solutions.active{
+    display: block;
+  }
