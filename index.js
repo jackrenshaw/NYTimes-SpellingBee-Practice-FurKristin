@@ -322,7 +322,7 @@ button_addtodict.onclick = function(){
     alert("Added word to dictionary")
 }
 
-button_showdict = function(){
+button_showdict.onclick = function(){
     Dictionary = JSON.parse(localStorage.getItem("Dictionary"))
     Dictionary = Array.from(new Set(Dictionary))
     field_foundwords.innerHTML = Dictionary.join(" &nbsp; ")
