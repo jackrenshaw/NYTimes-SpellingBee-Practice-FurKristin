@@ -291,6 +291,14 @@ field_foundwords.onclick = function(){
         field_foundwords.classList.add("expanded")
 }
 
+// When the dictionary area is clicked, it expands
+field_dictionary.onclick = function(){
+    if(field_dictionary.classList.contains("expanded"))
+        field_dictionary.classList.remove("expanded")
+    else
+    field_dictionary.classList.add("expanded")
+}
+
 // When the hints button is clicked, it becomes active and so does the hints area
 button_hints.onclick = function(){
     if(button_hints.classList.contains("active")){
@@ -324,8 +332,10 @@ button_addtodict.onclick = function(){
 
 button_showdict.onclick = function(){
     Dictionary = JSON.parse(localStorage.getItem("Dictionary"))
-    Dictionary = Array.from(new Set(Dictionary))
-    field_foundwords.innerHTML = Dictionary.join(" &nbsp; ")
+    Dictionary = new Set(Dictionary)
+    Added_words = Dictionary.symmetricDifference(new Set(words.filter(word => word.length >= 4)))
+    Added_words = Array.from(Added_words)
+    field_dictionary.innerHTML = Added_words.join(" &nbsp; ")
     if(field_dictionary.classList.contains("active"))
         field_dictionary.classList.remove("active")
     else

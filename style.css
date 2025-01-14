@@ -83,6 +83,18 @@ table div h1{
 #field_foundwords.expanded{
     height:auto;
 }
+
+#field_dictionary{
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    font-size: 1.3em;
+    height: 1.5em;
+}
+
+#field_dictionary.expanded{
+    height:auto;
+}
 .popup{
     display: none;
     position: fixed;
