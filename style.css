@@ -112,3 +112,9 @@ table div h1{
   #field_solutions.active{
     display: block;
   }
+  #field_dictionary{
+    display: none;
+  }
+  #field_dictionary.active{
+    display: block;
+  }

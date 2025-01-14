@@ -20,6 +20,7 @@ const button_newgame = document.getElementById("button_newgame")
 const button_hints = document.getElementById("button_hints")
 const button_showsolutions = document.getElementById("button_showsolutions")
 const button_addtodict = document.getElementById("button_addtodict")
+const button_showdict = document.getElementById("button_showdict")
 
 const button_difficultly = document.getElementById("button_difficulty") // Not yet used
 const button_outerletters = document.getElementsByClassName("button_outerletter")
@@ -33,7 +34,7 @@ const field_hints_words = document.getElementById("field_hints_words")
 const field_hints_lengths = document.getElementById("field_hints_lengths")
 const field_hints_panagrams = document.getElementById("field_hints_panagrams")
 const field_solutions = document.getElementById("field_solutions")
-
+const field_dictionary = document.getElementById("field_dictionary")
 
 // Function takes in an array and returns k random elements from the array
 function pickRandomNumbers(array, k) {
@@ -319,6 +320,16 @@ button_addtodict.onclick = function(){
     localStorage.setItem("ReducedWordList",JSON.stringify(RWL))
     localStorage.setItem("Dictionary",JSON.stringify(Dictionary))
     alert("Added word to dictionary")
+}
+
+button_showdict = function(){
+    Dictionary = JSON.parse(localStorage.getItem("Dictionary"))
+    Dictionary = Array.from(new Set(Dictionary))
+    field_foundwords.innerHTML = Dictionary.join(" &nbsp; ")
+    if(field_dictionary.classList.contains("active"))
+        field_dictionary.classList.remove("active")
+    else
+        field_dictionary.classList.add("active")
 }
 
 Main() // Call the main routine
